@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="style.css">
+    <title>Hover effect</title>
+  </head>
+  <body>
+<button class="button">
+    <span>
+        Подпишитесь на канал Быть программистом
+    </span>
+</button> <!-- /.button -->
+    
+<script>
+    document.querySelector('.button').
+        onmousemove = (e) => {
+            const x = e.pageX - e.target.
+                offsetLeft
+            const y = e.pageY - e.target.
+                offsetTop
+            e.target.style.setProperty('--x', x + "px")
+            e.target.style.setProperty('--y', y + "px")
+        }
+</script>  
+</body>
+</html>
